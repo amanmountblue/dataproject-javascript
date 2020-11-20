@@ -1,6 +1,6 @@
 
 <?php
 
-include_once("chart.html");
+include_once("index.html");
 
 ?>
