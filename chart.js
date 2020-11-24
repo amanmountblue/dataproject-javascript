@@ -1,6 +1,6 @@
 function plot1()
 {
-    fetch('http://0.0.0.0:8000/authorized_company_cap1.json')
+    fetch('authorized_company_cap1.json')
     .then(response => response.json())
     .then(data => {
         range_values = Object.keys(data)
@@ -87,7 +87,7 @@ function plot1()
 
 function plot2()
 {
-    fetch('http://0.0.0.0:8000/count_of_registration.json')
+    fetch('count_of_registration.json')
     .then(response => response.json())
     .then(data => {
         year = Object.keys(data)
@@ -166,7 +166,7 @@ function plot2()
 
 function plot3()
 {
-    fetch('http://0.0.0.0:8000/principal_top_ten_count.json')
+    fetch('principal_top_ten_count.json')
     .then(response => response.json())
     .then(data => {
         year = Object.keys(data)
@@ -252,7 +252,7 @@ function plot3()
 
 function plot4()
 {
-    fetch('http://0.0.0.0:8000/principal_buisness_activity.json')
+    fetch('principal_buisness_activity.json')
     .then(response => response.json())
     .then(data => {
         buisness_activity = Object.keys(data)
