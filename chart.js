@@ -7,8 +7,16 @@ function plot1()
         count_auth_cap = Object.values(data)
         Highcharts.chart('container', {
             chart: {
-                type: 'column'
-            },
+                type:"column",
+                // Edit chart spacing
+                spacingBottom: 50,
+                spacingTop: 80  ,
+                spacingLeft: 80,
+                spacingRight: 80,
+                // Explicitly tell the width and height of a chart
+                width: null,
+                height: 600 
+        },
             title: {
                 text: 'Authorized Company Capital',
             style: {
@@ -27,7 +35,7 @@ function plot1()
                 },    
                 title: {
                     text: 'Capital',
-                    margin:30,
+                    margin:20,
                     style: {
                         fontSize: '20px',
                         color: '#000',
@@ -86,8 +94,16 @@ function plot2()
         count = Object.values(data)
         Highcharts.chart('container', {
             chart: {
-                type: 'column'
-            },
+                type:"column",
+                // Edit chart spacing
+                spacingBottom: 50,
+                spacingTop: 80  ,
+                spacingLeft: 80,
+                spacingRight: 80,
+                // Explicitly tell the width and height of a chart
+                width: null,
+                height: 600 
+        },
             title: {
                 text: 'Barplot Of Registrations Per Year',
                 margin:10,
@@ -125,8 +141,7 @@ function plot2()
                     }
                     },
                 title: {
-                    text: 'Registration Counts',
-                    margin:15,
+                    text: 'Registration Counts',                    margin:30   ,
                     style: {
                         fontSize: '20px',
                         color: '#000',
@@ -160,8 +175,16 @@ function plot3()
         count = count.reverse().slice(0,10)
         Highcharts.chart('container', {
             chart: {
-                type: 'bar'
-            },
+                type:"bar",
+                // Edit chart spacing
+                spacingBottom: 50,
+                spacingTop: 80  ,
+                spacingLeft: 80,
+                spacingRight: 80,
+                // Explicitly tell the width and height of a chart
+                width: null,
+                height: 600 
+        },
             title: {
                 text: 'Bar Plot Of Top Principal Company 2015',
                 margin:10,
@@ -236,8 +259,16 @@ function plot4()
         activity_count = Object.values(data)
         Highcharts.chart('container', {
             chart: {
-                type: 'column'
-            },
+                type:"column",
+                // Edit chart spacing
+                spacingBottom: 50,
+                spacingTop: 80  ,
+                spacingLeft: 80,
+                spacingRight: 80,
+                // Explicitly tell the width and height of a chart
+                width: null,
+                height: 600 
+        },
             title: {
                 text: 'Grouped Bar Plot Of Buisness Activity',
                 style: {
@@ -258,6 +289,7 @@ function plot4()
                 crosshair: true,
                 title: {
                     text: 'Grouped Principal Activity',
+                    margin:20,
                     style: {
                         fontSize: '20px',
                         color: '#000',
@@ -276,10 +308,11 @@ function plot4()
                 min: 0,
                 title: {
                     text: 'Count Per Year',
+                    margin:20,
                     style: {
                         fontSize: '20px',
                         color: '#000',
-                        fontWeight: 700
+                        fontWeight: 500
                     }
                 }
             },
