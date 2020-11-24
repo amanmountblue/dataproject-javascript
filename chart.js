@@ -1,6 +1,6 @@
 function plot1()
 {
-    fetch('authorized_company_cap1.json')
+    fetch('http://0.0.0.0:8000/authorized_company_cap1.json')
     .then(response => response.json())
     .then(data => {
         range_values = Object.keys(data)
@@ -10,30 +10,76 @@ function plot1()
                 type: 'column'
             },
             title: {
-                text: 'Authorized Company Capital'
+                text: 'Authorized Company Capital',
+            style: {
+                fontSize: '30px',
+                color: '#000',
+                fontWeight: 700
+            }
+
             },
             xAxis: {
+                labels: {
+                    style: {
+                        fontSize: '20px',
+                        color: '#000',
+                    }
+                },    
                 title: {
-                    text: 'Capital'
+                    text: 'Capital',
+                    margin:30,
+                    style: {
+                        fontSize: '20px',
+                        color: '#000',
+                        fontWeight: 500
+                    }
+                    
                 },
                 categories: range_values
             },
             yAxis: {
+                labels: {
+                    style: {
+                        fontSize: '20px',
+                        color: '#000',
+                    }
+                },    
                 title: {
-                    text: 'No of Companies'
+                    text: 'No of Companies',
+                    margin:30,
+                    style: {
+                        color: '#000',
+                        fontSize: '20px',
+                        fontWeight: 500
+                    }
                 }
             },
+            legend: {
+                enabled: false
+            },
+    
             series: [{
-                name: 'Capital Count',
-                data: count_auth_cap
+                name: 'count of interval',
+                data: count_auth_cap,
+                color: 'red',
+                dataLabels: {
+                    enabled: true,
+                    rotation: 0,
+                    style: {
+                        fontSize: '20px',
+                        fontWeight: 500
+                    }
+                },
+               
             }]
+    
         });
     });
 }
 
 function plot2()
 {
-    fetch('count_of_registration.json')
+    fetch('http://0.0.0.0:8000/count_of_registration.json')
     .then(response => response.json())
     .then(data => {
         year = Object.keys(data)
@@ -43,22 +89,61 @@ function plot2()
                 type: 'column'
             },
             title: {
-                text: 'Barplot Of Registrations Per Year'
+                text: 'Barplot Of Registrations Per Year',
+                margin:10,
+                style: {
+                    fontSize: '30px',
+                    color: '#000',
+                    fontWeight: 700
+                }
+    
             },
             xAxis: {
+                    labels: {
+                        style: {
+                            fontSize: '15px',
+                            color: '#000',
+                        }
+                },
                 title: {
-                    text: 'Year'
+                    text: 'Year',
+                    margin:10,
+                    style: {
+                        fontSize: '20px',
+                        color: '#000',
+                        fontWeight: 500
+                    }
+                    
                 },
                 categories: year
             },
             yAxis: {
+                labels: {
+                    style: {
+                        fontSize: '15px',
+                        color: '#000',
+                    }
+                    },
                 title: {
-                    text: 'Registration Counts'
+                    text: 'Registration Counts',
+                    margin:15,
+                    style: {
+                        fontSize: '20px',
+                        color: '#000',
+                        fontWeight: 500
+                    }
                 }
+
+            },
+            legend :{
+                enabled:false
             },
             series: [{
-                name: 'no of counts',
-                data: count
+                name: 'count of registrations',
+                data: count,
+                color: 'blue',
+
+               
             }]
         });
     });
@@ -66,7 +151,7 @@ function plot2()
 
 function plot3()
 {
-    fetch('principal_top_ten_count.json')
+    fetch('http://0.0.0.0:8000/principal_top_ten_count.json')
     .then(response => response.json())
     .then(data => {
         year = Object.keys(data)
@@ -78,22 +163,65 @@ function plot3()
                 type: 'bar'
             },
             title: {
-                text: 'Bar Plot Of Top Principal Company 2015'
+                text: 'Bar Plot Of Top Principal Company 2015',
+                margin:10,
+                style: {
+                    fontSize: '30px',
+                    color: '#000',
+                    fontWeight: 500
+                }
             },
             xAxis: {
+                labels: {
+                    style: {
+                        fontSize: '15px',
+                        color: '#000',
+                    }
+                    },
                 title: {
-                    text: 'Company Name'
+                    text: 'Company Name',
+                    margin:10,
+                style: {
+                    fontSize: '20px',
+                    color: '#000',
+                    fontWeight: 500
+                }
                 },
                 categories: year
             },
             yAxis: {
+                labels: {
+                    style: {
+                        fontSize: '15px',
+                        color: '#000',
+                    }
+                    },
                 title: {
-                    text: 'No of Registrations'
+                    text: 'No of Registrations',
+                    margin:15,
+                    style: {
+                        fontSize: '20px',
+                        color: '#000',
+                        fontWeight: 500
+                    }
+
                 }
             },
+            legend:{
+                enabled:false
+            },
             series: [{
-                name: 'Registration Counts',
-                data: count
+                name: 'count of interval',
+                data: count,
+                dataLabels: {
+                    enabled: true,
+                    rotation: 0,
+                    style: {
+                        fontSize: '16px',
+                        fontWeight: 500
+                    }
+                },
+               
             }]
         });
     });
@@ -101,7 +229,7 @@ function plot3()
 
 function plot4()
 {
-    fetch('principal_buisness_activity.json')
+    fetch('http://0.0.0.0:8000/principal_buisness_activity.json')
     .then(response => response.json())
     .then(data => {
         buisness_activity = Object.keys(data)
@@ -111,20 +239,48 @@ function plot4()
                 type: 'column'
             },
             title: {
-                text: 'Grouped Bar Plot Of Buisness Activity'
+                text: 'Grouped Bar Plot Of Buisness Activity',
+                style: {
+                    fontSize: '30px',
+                    color: '#000',
+                    fontWeight: 700
+                }
+        
             },
             xAxis: {
+                labels: {
+                    style: {
+                        fontSize: '15px',
+                        color: '#000',
+                    }
+                    },
                 categories: activity_count[5],
                 crosshair: true,
                 title: {
-                    text: 'Grouped Principal Activity'
+                    text: 'Grouped Principal Activity',
+                    style: {
+                        fontSize: '20px',
+                        color: '#000',
+                        fontWeight: 500
+                    }
                 }
 
             },
             yAxis: {
+                labels: {
+                    style: {
+                        fontSize: '15px',
+                        color: '#000',
+                    }
+                    },
                 min: 0,
                 title: {
-                    text: 'Count Per Year'
+                    text: 'Count Per Year',
+                    style: {
+                        fontSize: '20px',
+                        color: '#000',
+                        fontWeight: 700
+                    }
                 }
             },
 
