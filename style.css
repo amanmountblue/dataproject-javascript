@@ -1,32 +1,110 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <div class="main" , id= "home">
-        <!--menu-->
-        <ul class="nav">
-            <li><a href="index.html" class="active">Data Project Javascript</a></li>
-        </ul>	
-    </div>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src = "chart.js"></script>
-    <figure class="highcharts-figure">
-        <div id="container"></div>
-            <script>plot1();</script>  
-    </figure>
-    <div class="container">
-        <div class="vertical-center">
-        <button class="button">
-           <p> <a href="index.html"><span data-title="Lets Visualize other graph">Back</span></a></p>
-          </button>
-        </div>
-    </div>
 
-</body>
-</html>
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    justify-content: center;
+  }
+  .button :nth-child(1){
+      color: cornsilk;
+  }
+.container { 
+  height: 120px;
+  position: relative;
+
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.nav {
+    background-color:#050505;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    flex-direction: row;
+    font-size: 25px;
+    font-weight: 1000;
+    padding: 18px 10px;
+	overflow: hidden;
+    position: relative;
+    font-style: bold;
+
+}
+.question-container {
+	padding: 40px 100px;
+	margin: 1%  auto 20px auto;
+	background-color: rgb(211, 206, 211);
+	
+}
+.question-container p {
+    text-align: justify;
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #030303;
+	line-height: 25px;
+	padding-top: 10px;
+}
+.question-container button{
+    text-align: justify;
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #030303;
+	line-height: 25px;
+	padding-top: 10px;
+	margin-left: 60px ;
+}
+
+.nav li a {
+    display: block;
+    color: rgb(255, 253, 253);
+    padding: 12px;
+	text-decoration: none;
+    padding-top: 17px;
+}
+
+.highcharts-data-table table {
+	font-family: Verdana, sans-serif;
+	border-collapse: collapse;
+	border: 1px solid #EBEBEB;
+	margin: 10px auto;
+	text-align: center;
+	width: 100%;
+	max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+	font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
